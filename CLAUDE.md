@@ -39,9 +39,19 @@ Run the renderer with a timeout so it can't hang:
 2. **Read `log.md`** to see what was posted recently and pick fresh angles. Rotate pillars:
    Ideas · Setup/Decor · Countdown · Product peek (show a sample page) · Free sample invite.
 3. **Write `posts/YYYY-MM-DD/day.json`** with 4 items, following the shape documented at the
-   top of `render.py` (templates: `list`, `steps`, `lanterns`, `bignumber`):
-   - `pin-1`, `pin-2`, `pin-3` with `"size": "pin"`, each a different template or angle.
-   - `ig-1` with `"size": "ig"`.
+   top of `render.py`. Most posts must SHOW THE REAL PRODUCT, not just text:
+   - **Product templates (use these most):**
+     - `mockup`: real sample pages laid out like printed sheets. `"pages"`: 1 to 3 of
+       `deeds`, `deeds-colored`, `countdown`, `countdown-colored`, `coloring`, `coloring-colored`.
+       Fields: `tag`, `title` (list of 1-2 short lines), optional `highlight`, `footer`.
+     - `beforeafter`: one page blank vs colored. `"page"`: `deeds`, `countdown` or `coloring`.
+       Fields: `tag`, `title`, `caption`, `footer`.
+     - `closeup`: zoomed crop of a real page. `"page"`: any page name above,
+       `"focus"`: `top`, `middle` or `bottom`. Fields: `tag`, `title`, `caption`, `footer`.
+   - **Text templates (at most 1 per day):** `list`, `steps`, `lanterns`, `bignumber`.
+   - Daily mix: `pin-1` and `pin-2` use product templates, `pin-3` may be a text tip,
+     `ig-1` (`"size": "ig"`) uses a product template. Rotate pages and templates so the same
+     image isn't repeated two days in a row.
    Keep titles short (they must fit: about 3 lines of 12-18 characters), list items under
    34 characters, step descriptions under 40 characters.
 4. **Render images:** `python render.py posts/YYYY-MM-DD/day.json`.

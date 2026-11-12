@@ -115,7 +115,69 @@ def t_bignumber(c):
 <div class="foot" style="color:#fff">{e(c.get('footer',''))}</div></div>"""
 
 
-TEMPLATES = {"list": t_list, "steps": t_steps, "lanterns": t_lanterns, "bignumber": t_bignumber}
+ASSETS = pathlib.Path(__file__).resolve().parent / "assets"
+PAGE_NAMES = {"deeds", "deeds-colored", "countdown", "countdown-colored", "coloring", "coloring-colored"}
+
+
+def page_img(name, width, rot=0, extra=""):
+    if name not in PAGE_NAMES:
+        raise SystemExit(f"Unknown page image '{name}'. Use one of: {sorted(PAGE_NAMES)}")
+    src = (ASSETS / f"{name}.png").as_uri()
+    return (f'<img src="{src}" style="width:{width}px;border-radius:10px;background:#fff;'
+            f'box-shadow:0 18px 40px #0003, 0 2px 6px #0002;transform:rotate({rot}deg);{extra}">')
+
+
+def t_mockup(c):
+    """Real sample pages laid out like printed sheets on a table. c['pages']: 1 to 3 page names."""
+    pages = c["pages"][:3]
+    w, h = SIZES[c.get("size", "pin")]
+    layouts = {1: [(0, 0, 620, -2)], 2: [(-150, 30, 520, -6), (150, -10, 520, 5)],
+               3: [(-210, 60, 470, -8), (210, 40, 470, 7), (0, -20, 500, -1)]}
+    imgs = "".join(
+        f'<div style="position:absolute;left:50%;top:50%;transform:translate(calc(-50% + {dx}px), calc(-50% + {dy}px))">'
+        f'{page_img(p, pw, rot)}</div>' for p, (dx, dy, pw, rot) in zip(pages, layouts[len(pages)]))
+    area_h = h - 520
+    return f"""<div style="position:relative;height:100%;background:linear-gradient(180deg,{CREAM},#f3e6cf);padding:80px 70px">
+<span class="tag">{e(c.get('tag',''))}</span>
+<h1 style="font-size:78px;line-height:1.04;margin-top:26px">{title_html(c['title'], c.get('highlight'), TEAL)}</h1>
+<div style="position:absolute;left:0;right:0;top:400px;height:{area_h}px">{imgs}</div>
+<div class="foot" style="color:{NAVY}">{e(c.get('footer',''))}</div></div>"""
+
+
+def t_beforeafter(c):
+    """Same page before and after coloring. c['page']: deeds | countdown | coloring."""
+    p = c["page"]
+    label = lambda t, bg: (f'<div class="f" style="text-align:center;margin-top:18px;font-size:34px;font-weight:700;'
+                           f'color:{NAVY}"><span style="background:{bg};border-radius:999px;padding:6px 22px">{t}</span></div>')
+    return f"""<div style="position:relative;height:100%;background:#fff;padding:80px 60px">
+<span class="tag" style="background:{ROSE};color:#fff">{e(c.get('tag','BEFORE & AFTER'))}</span>
+<h1 style="font-size:76px;line-height:1.05;margin-top:26px">{title_html(c['title'], c.get('highlight'), ROSE)}</h1>
+<div style="display:flex;gap:26px;justify-content:center;margin-top:110px">
+  <div>{page_img(p, 425, -2)}{label('Before', '#ece4d4')}</div>
+  <div>{page_img(p + '-colored', 425, 2)}{label('After', GOLD)}</div>
+</div>
+<p style="font-size:34px;text-align:center;margin-top:40px;color:#5d5978">{e(c.get('caption',''))}</p>
+<div class="foot" style="color:{NAVY}">{e(c.get('footer',''))}</div></div>"""
+
+
+def t_closeup(c):
+    """A zoomed-in crop of one real page. c['page'] any page name; c['focus']: top | middle | bottom."""
+    pos = {"top": "50% 2%", "middle": "50% 50%", "bottom": "50% 92%"}[c.get("focus", "top")]
+    src = (ASSETS / f"{c['page']}.png").as_uri() if c["page"] in PAGE_NAMES else ""
+    if not src:
+        raise SystemExit(f"Unknown page image '{c['page']}'")
+    return f"""<div style="position:relative;height:100%;background:{NAVY};color:#fff;padding:80px 70px">
+<div class="stars"></div><div style="position:relative">
+<span class="tag">{e(c.get('tag',''))}</span>
+<h1 style="font-size:76px;line-height:1.05;margin-top:26px">{title_html(c['title'], c.get('highlight'))}</h1>
+<div style="margin-top:50px;height:760px;border-radius:34px;overflow:hidden;background:#fff;box-shadow:0 20px 50px #0006;
+  background-image:url('{src}');background-size:175%;background-position:{pos};background-repeat:no-repeat"></div>
+<p style="font-size:34px;margin-top:34px;color:#e4e1f7;text-align:center">{e(c.get('caption',''))}</p>
+</div><div class="foot" style="color:#fff">{e(c.get('footer',''))}</div></div>"""
+
+
+TEMPLATES = {"list": t_list, "steps": t_steps, "lanterns": t_lanterns, "bignumber": t_bignumber,
+             "mockup": t_mockup, "beforeafter": t_beforeafter, "closeup": t_closeup}
 
 
 def find_browser():
