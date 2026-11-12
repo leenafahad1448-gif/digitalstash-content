@@ -24,6 +24,15 @@ activities for Muslim kids ages 4 to 10. Its first product line is **Little Lant
 5. Every Metricool post is created with `"draft": true`. Never publish.
 6. Don't repeat a topic or title from the last 14 days in `log.md`.
 7. If a step fails, stop and explain it in the Arabic summary. Don't guess or work around it.
+8. Only mention printables that exist today: the 3 free sample pages (30 Good Deeds tracker,
+   Countdown to Eid with 30 lanterns, masjid coloring page). Ideas and crafts are fine, but
+   never say or imply "print our template" for anything else.
+9. Pinterest pins and the Instagram post on the same day must each have a clearly different
+   angle and design. Don't make two posts that both just list the 3 free pages.
+
+## Rendering tip
+Run the renderer with a timeout so it can't hang:
+`export PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers; timeout 100 python render.py posts/YYYY-MM-DD/day.json`
 
 ## Daily procedure
 1. **Date.** Today's date in Asia/Riyadh time. Days until Ramadan = days until 2027-02-08.
