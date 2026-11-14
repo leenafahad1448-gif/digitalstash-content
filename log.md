@@ -14,3 +14,7 @@ Format: date · network · title
 2026-11-14 · pinterest · A Kind Deed Every Day
 2026-11-14 · pinterest · Get Kids Ready for Ramadan Now
 2026-11-14 · instagram · Quiet Time Coloring: Masjid page (87 days to Ramadan)
+2026-11-15 · pinterest · Kind Deeds, Star by Star
+2026-11-15 · pinterest · Color Lanterns and Hang Up
+2026-11-15 · pinterest · Start a Deeds Jar
+2026-11-15 · instagram · Set Up a Kids Ramadan Corner (85 days to Ramadan)
