@@ -18,3 +18,7 @@ Format: date · network · title
 2026-11-15 · pinterest · Color Lanterns and Hang Up
 2026-11-15 · pinterest · Start a Deeds Jar
 2026-11-15 · instagram · Set Up a Kids Ramadan Corner (85 days to Ramadan)
+2026-11-16 · pinterest · 30 Lanterns Until Eid
+2026-11-16 · pinterest · From Blank to Beautiful
+2026-11-16 · pinterest · 5 Ways Kids Can Help at Iftar
+2026-11-16 · instagram · Small Habits Before Ramadan (84 days to Ramadan)
