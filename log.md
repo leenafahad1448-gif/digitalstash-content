@@ -22,3 +22,7 @@ Format: date · network · title
 2026-11-16 · pinterest · From Blank to Beautiful
 2026-11-16 · pinterest · 5 Ways Kids Can Help at Iftar
 2026-11-16 · instagram · Small Habits Before Ramadan (84 days to Ramadan)
+2026-11-18 · pinterest · Hang Your Eid Countdown
+2026-11-18 · pinterest · A Calm Corner to Color
+2026-11-18 · pinterest · 4 Cozy Ways to Welcome Ramadan
+2026-11-18 · instagram · Fill a Star for Every Deed (83 days to Ramadan)
