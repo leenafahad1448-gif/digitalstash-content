@@ -26,3 +26,7 @@ Format: date · network · title
 2026-11-18 · pinterest · A Calm Corner to Color
 2026-11-18 · pinterest · 4 Cozy Ways to Welcome Ramadan
 2026-11-18 · instagram · Fill a Star for Every Deed (83 days to Ramadan)
+2026-11-19 · pinterest · A Masjid to Color and Keep
+2026-11-19 · pinterest · Kind Deeds and Quiet Color
+2026-11-19 · pinterest · 5 Easy Crafts for Ramadan
+2026-11-19 · instagram · Count Down to Eid Together (81 days to Ramadan)
