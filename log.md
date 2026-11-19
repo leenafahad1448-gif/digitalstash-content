@@ -30,3 +30,7 @@ Format: date · network · title
 2026-11-19 · pinterest · Kind Deeds and Quiet Color
 2026-11-19 · pinterest · 5 Easy Crafts for Ramadan
 2026-11-19 · instagram · Count Down to Eid Together (81 days to Ramadan)
+2026-11-20 · pinterest · Stars for Kind Hearts
+2026-11-20 · pinterest · Colorful Pages for Your Wall
+2026-11-20 · pinterest · A Paper Chain Countdown
+2026-11-20 · instagram · A Quiet Masjid to Color (80 days to Ramadan)
