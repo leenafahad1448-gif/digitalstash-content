@@ -34,3 +34,7 @@ Format: date · network · title
 2026-11-20 · pinterest · Colorful Pages for Your Wall
 2026-11-20 · pinterest · A Paper Chain Countdown
 2026-11-20 · instagram · A Quiet Masjid to Color (80 days to Ramadan)
+2026-11-21 · pinterest · Watch the Stars Fill Up
+2026-11-21 · pinterest · Lantern by Lantern
+2026-11-21 · pinterest · 5 Cozy Evening Ideas for Ramadan
+2026-11-21 · instagram · Free Pages to Start Early (79 days to Ramadan)
