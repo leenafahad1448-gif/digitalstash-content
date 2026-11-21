@@ -38,3 +38,7 @@ Format: date · network · title
 2026-11-21 · pinterest · Lantern by Lantern
 2026-11-21 · pinterest · 5 Cozy Evening Ideas for Ramadan
 2026-11-21 · instagram · Free Pages to Start Early (79 days to Ramadan)
+2026-11-22 · pinterest · Count the Nights to Eid
+2026-11-22 · pinterest · Cozy Pages for Little Hands
+2026-11-22 · pinterest · A Paper Lantern for the Window
+2026-11-22 · instagram · A Kind Deed Every Day (78 days to Ramadan)
